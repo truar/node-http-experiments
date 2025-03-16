@@ -1,0 +1,19 @@
+{
+    "name": "node-client-http",
+    "version": "1.0.0",
+    "author": "Thibault Ruaro <thibault.ruaro@gmail.com>",
+    "packageManager": "yarn@4.0.0",
+    "main": "./dist/index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "tsc",
+        "serve": "yarn build && yarn node dist/index.js"
+    },
+    "dependencies": {
+        "express": "^4.21.2"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "typescript": "^5.8.2"
+    }
+}
