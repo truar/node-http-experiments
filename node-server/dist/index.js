@@ -14,6 +14,8 @@ app.get('/time', (req, res) => {
     const currentDateTime = new Date();
     res.send(currentDateTime.toISOString());
 });
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 });
+let connectionCount = 0;
+server.on('connection', () => console.log(`${connectionCount++} - New connection created`));
